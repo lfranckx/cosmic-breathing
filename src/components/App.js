@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css';
+import '../styles/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -10,7 +10,7 @@ function App() {
     <>
       <div id='app'>
         <Routes>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' element={<Home/>} />
         </Routes>
       </div>
     </>

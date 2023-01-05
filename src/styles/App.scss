@@ -1,0 +1,37 @@
+@import "./vars";
+
+* {
+    font-family: 'FoundersGrotesk', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, h5, ul, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.container {
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
