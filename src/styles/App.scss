@@ -35,3 +35,16 @@ p {
     align-items: center;
     justify-content: space-between;
 }
+
+.logo {
+    max-width: 180px;
+}
+
+.page_wrap {
+    min-height: 100vh;
+    width: 100%;
+
+    &.home {
+        background: $cream;
+    }
+}
