@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../images/logo-main.png';
 
-export default function Header() {
+export default function Header(props) {
+    const [active, setActive] = useState(false);
+ 
     return (
         <div className='page_width header_wrap'>
             <header id='header'>
@@ -9,9 +11,14 @@ export default function Header() {
                     <div className='logo_wrap'>
                         <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />
                     </div>
-                    <button id='menu_button'>
+
+                    <button 
+                        id='menu_button' 
+                        className={active ? 'active' : ''}
+                        onClick={() => {setActive(!active)}}
+                    >
                         <div className='text_wrap'>
-                            <span className='menu_text'>Menu</span>
+                            <span className='menu_text'>{active ? 'Close' : 'Menu'}</span>
                         </div>
                         
                         <div className='wrap'>

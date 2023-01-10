@@ -4,9 +4,6 @@
     font-family: $body-font, sans-serif;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
 }
 
 body {
@@ -111,6 +108,9 @@ header {
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
+    -webkit-transition: all .16s ease-in-out;
+    -o-transition: all .16s ease-in-out;
+    transition: all .16s ease-in-out;
 
     .wrap {
         display: inline-flex;
@@ -145,13 +145,22 @@ header {
     }
 
     &:hover {
-        letter-spacing: 5px;
-        transition: all ease 0s;
+        letter-spacing: 4px;
 
         .wrap {
             .slash {
                 &::before {
                     transform: translate3d(-1.7px,0,0) rotate(-180deg) skewX(-20deg);
+                }
+            }
+        }
+    }
+
+    &.active {
+        .wrap {
+            .slash {
+                &::before {
+                    transform: translate3d(-1.7px,0,0) rotate(90deg) skewX(0deg)
                 }
             }
         }

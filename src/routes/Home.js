@@ -18,6 +18,5 @@ export default function Home() {
                 <h3 className='text-center'>Integrated Approach to Personal Expansion</h3>
             </main>
         </div>
-        
     )
 }
