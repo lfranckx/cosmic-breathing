@@ -1,16 +1,23 @@
 import React from 'react';
-import logo from '../images/logo-main.png';
 
 export default function Home() {
     return (
-        <div class='page_wrap home'>
-            <header id='header'>
-                <div className='flex container'>
-                    <div class='logo_wrap'>
-                        <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />
+        <div className='small_width'>
+            <main id='home'>
+                <div className='flex column-reverse'>
+                    <h1>Cosmic Breathing</h1>
+                    <div className='flex row'>
+                        <h2>Vedantic Breathwork</h2>
+                        <div className='circle'></div>
+                        <h2>Meditation</h2>
+                        <div className='circle'></div>
+                        <h2>Yoga in the Himalayan Tradition</h2>
                     </div>
                 </div>
-            </header>
+
+                <h3 className='text-center'>Integrated Approach to Personal Expansion</h3>
+            </main>
         </div>
+        
     )
 }
