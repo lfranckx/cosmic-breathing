@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import Home from '../routes/Home';
 import Header from './Header';
+import About from '../routes/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path='/' element={<Home/>} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </div>
     </>

@@ -33,13 +33,22 @@ export default function Header(props) {
             </div>
             <div id='menu' className={active ? 'show' : ''} >
                 <div className='content'>
-                    <div className='link_wrap'><Link className='h1 link' to='/'>Index</Link></div>
-                    <div className='link_wrap right'><Link className='h1 link' to='/' >About</Link></div>
-                    <div className='link_wrap'><Link className='h1 link' to='/' >Work</Link></div>
-                    <div className='link_wrap left'><Link className='h1 link' to='/' >Services</Link></div>
-                    <div className='link_wrap'><Link className='h1 link' to='/' >Contact</Link></div>
+                    <div className='link_wrap'>
+                        <Link className='h1 link' to='/' onClick={() => {setActive(!active)}}>Home</Link>
+                    </div>
+                    <div className='link_wrap right'>
+                        <Link className='h1 link' to='/about' onClick={() => {setActive(!active)}}>About</Link>
+                    </div>
+                    <div className='link_wrap'>
+                        <Link className='h1 link' to='/' onClick={() => {setActive(!active)}}>Work</Link>
+                        </div>
+                    <div className='link_wrap left'>
+                        <Link className='h1 link' to='/' onClick={() => {setActive(!active)}}>Services</Link>
+                    </div>
+                    <div className='link_wrap'>
+                        <Link className='h1 link' to='/' onClick={() => {setActive(!active)}}>Contact</Link>
+                    </div>
                 </div>
-                
             </div>
         </>
     )
