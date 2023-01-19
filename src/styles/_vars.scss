@@ -1,13 +1,24 @@
 $black: #100D0D;
-$cream: #FAF8EE;
 $white: #FFF;
+$cream: #FAF8EE;
+$grey: #E5DFD3;
 $bronze: #AEA282;
 $blue: #000080;
+$red: #E7B9B9;
+$babyblue: #B8D1CD;
 
-$body-font: 'FoundersGrotesk';
-$title-font: 'Montage';
+$font1: 'FoundersGrotesk';
+$font2: 'Montaga';
 
 $giant-text: 4rem;
+$larger-text: 1.6rem;
 $large-text: 1.2rem;
 $reg-text: 1rem;
 $small-text: .8rem;
+
+$small_width: 800px;
+$small_width_query: 820px;
+$page_width: 1500px;
+$page_width_query: 1520px; 
+$page_width_narrow: 1200px;
+$page_width_narrow_query: 1220px;
