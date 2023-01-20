@@ -64,7 +64,7 @@ const Connect = () => {
 
     return (
     <>
-        <div className='small_width'>
+        <div className='small_width connect-page'>
             <main id='connect'>
                 <section className='content'>
                     <h2 className='h1'>Connect</h2>

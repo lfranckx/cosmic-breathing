@@ -1,32 +1,42 @@
 @import "./vars";
 
-header {
-    padding: 20px 0;
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 20;
 
-    .logo_text_wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .p1 {
-            color: $black;
-            z-index: 13;
-            &.black { color: $black; }
-            &.cream { color: $cream; }
-            &.bronze { color: $bronze; }
+    header {
+        padding: 20px 0;
+    
+        .logo_text_wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            .p1 {
+                color: $black;
+                z-index: 13;
+                &.black { color: $black; }
+                &.cream { color: $cream; }
+                &.bronze { color: $bronze; }
+            }
+    
+            .logo_wrap {
+                z-index: 13;
+            }
         }
-
+    
         .logo_wrap {
-            z-index: 13;
+            z-index: 12;
+            margin-top: 6px;
         }
-    }
-
-    .logo_wrap {
-        z-index: 12;
-        margin-top: 6px;
     }
 }
+
 
 #menu_button {
     display: flex;

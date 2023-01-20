@@ -24,8 +24,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home/>} />
-          {/* <Route path='/about' element={<About />} /> */}
-          <Route path='/about' element={<AboutNew />} />
+          <Route path='/about' element={<About />} />
+          {/* <Route path='/about' element={<AboutNew />} /> */}
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />
         </Routes>
