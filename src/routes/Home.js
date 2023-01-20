@@ -1,9 +1,21 @@
 import React from 'react';
 import '../styles/Home.scss';
+import { motion } from "framer-motion";
 
 export default function Home(props) {
+
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
+
     return (
-        <div className='page_width'>
+        <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            className='page_width'
+        >
             <main id='home'>
                 <div className='small_width'>
                     <div className='flex column-reverse'>
@@ -20,6 +32,6 @@ export default function Home(props) {
                     <h3 className='text-center'>Integrated Approach to Personal Expansion</h3>
                 </div>
             </main>
-        </div>
+        </motion.div>
     );
 }
