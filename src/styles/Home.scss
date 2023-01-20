@@ -5,12 +5,20 @@
 
     h1 {
         margin: 1.5rem 0;
+        text-align: center;
     }
 
     h2 {
         font-size: $reg-text;
         font-weight: 400;
-        color: $bronze;
+        text-align: center;
+        span {
+            color: $bronze;
+
+            &.space {
+                margin: 0 8px;
+            }
+        }
     }
 
     h3 {

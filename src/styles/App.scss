@@ -177,6 +177,7 @@ button[disabled=disabled], button:disabled {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 .page-transition {
@@ -224,6 +225,7 @@ button[disabled=disabled], button:disabled {
     max-width: 800px;
     margin: auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 .text-center {
@@ -252,5 +254,25 @@ button[disabled=disabled], button:disabled {
 
     &.grey {
         background: $grey;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    h1, .h1 {
+        font-size: $giant-text * .8;
+    }
+
+    .logo {
+        max-width: 180px * .8;
+    }
+
+    .p1 {
+        font-size: $reg-text * .8;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    h1, .h1 {
+        font-size: $giant-text * .6;
     }
 }

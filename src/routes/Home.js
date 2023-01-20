@@ -14,21 +14,19 @@ export default function Home(props) {
             initial="hidden"
             animate="visible"
             variants={variants}
-            className='page_width'
         >
             <main id='home'>
                 <div className='small_width'>
                     <div className='flex column-reverse'>
                         <h1>Cosmic Breathing</h1>
-                        <div className='flex row'>
-                            <h2>Vedantic Breathwork</h2>
-                            <div className='circle'></div>
-                            <h2>Meditation</h2>
-                            <div className='circle'></div>
-                            <h2>Yoga in the Himalayan Tradition</h2>
-                        </div>
+                        <h2>
+                            <span>Vedantic Breathwork</span>
+                            <span className='space'> • </span>
+                            <span>Meditation</span>
+                            <span className='space'> • </span>
+                            <span>Yoga in the Himalayan Tradition</span>
+                        </h2>
                     </div>
-
                     <h3 className='text-center'>Integrated Approach to Personal Expansion</h3>
                 </div>
             </main>
