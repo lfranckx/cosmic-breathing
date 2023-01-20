@@ -13,6 +13,7 @@ header {
             color: $black;
             z-index: 13;
             &.cream { color: $cream; }
+            &.bronze { color: $bronze; }
         }
 
         .logo_wrap {
@@ -38,13 +39,25 @@ header {
     z-index: 13;
 
     .text_wrap {
+        .menu_text {
+            color: $black;
+        }
+
         .menu_text.cream {
-            color: $cream;
+            color: $cream !important;
+        }
+
+        .menu_text.bronze {
+            color: $bronze;
         }
 
         &.active {
             .menu_text.cream {
                 color: $black;
+            }
+
+            .menu_text.bronze {
+                color: $bronze;
             }
         }
     }
@@ -63,12 +76,6 @@ header {
             flex-direction: column;
             align-items: flex-end;
             justify-content: center;
-
-            &.cream {
-                &::before {
-                    background-color: $cream;
-                }
-            }
         
             &::before {
                 transform: translate3d(-1.7px,0,0) rotate(180deg) skewX(-20deg);
@@ -82,6 +89,18 @@ header {
                 width: 0.85px;
                 height: 100%;
                 background-color: $black;
+            }
+
+            &.cream {
+                &::before {
+                    background-color: $cream !important;
+                }
+            }
+
+            &.bronze {
+                &::before {
+                    background-color: $bronze !important;
+                }
             }
         }
     }
@@ -129,13 +148,21 @@ header {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
     padding: 0;
-    background: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 16px 8px rgba(255, 255, 255, 0.8);
     z-index: 12;
+
+    &.black {
+        background: $black;
+        box-shadow: 0px 16px 8px rgba(16, 13, 13, 0.8);
+    }
+
+    &.white {
+        background: $white;
+        box-shadow: 0px 16px 8px rgba(255, 255, 255, 0.8);
+    }
 
     &.show {
         height: 100vh;
@@ -174,6 +201,14 @@ header {
 
                 &:hover {
                     letter-spacing: 4px;
+                }
+
+                &.bronze {
+                    color: $bronze;
+                }
+
+                &.black {
+                    color: $black;
                 }
             }
         }
