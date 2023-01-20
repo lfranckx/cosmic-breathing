@@ -113,6 +113,10 @@ li {
     }
 }
 
+button[disabled=disabled], button:disabled {
+    opacity: .5;
+}
+
 .circle {
     width: 8px;
     height: 8px;
@@ -173,6 +177,38 @@ li {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
+}
+
+.page-transition {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 12;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+
+    &.black {
+        background: $black;
+        box-shadow: 0px 16px 8px rgba(16, 13, 13, 0.8);
+    }
+    
+    &.white {
+        background: $white;
+        box-shadow: 0px 16px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    &.cream {
+        background: $cream;
+        box-shadow: 0px 16px 8px rgba(250, 248, 238, 0.8);
+    }
+
+    &.active {
+        height: 116%;
+    }
 }
 
 .relative {

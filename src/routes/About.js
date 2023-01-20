@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import mountain from '../images/mountain_hex.png';
 import david from '../images/david_hex.png';
 import girl from '../images/girl_hex.png';
@@ -9,10 +9,19 @@ import { motion } from "framer-motion";
 export default function About(props) {
 
     const [active, setActive] = useState(false);
+    const navigate = useNavigate();
 
     const variants = {
         visible: { opacity: 1 },
         hidden: { opacity: 0 },
+    }
+
+    const handlePageTransition = () => {
+        setActive(!active);
+        setTimeout(() => {
+            setActive(false);
+            navigate('/services');
+        }, 1000)
     }
     
     return (
@@ -56,18 +65,19 @@ export default function About(props) {
                             <p className='cream'>The life-altering effects of these practices are undeniable, truly limitless and can be seen all throughout his life. The power of the breath, the deep silence of meditation, and the activation of untapped energy are all at the foundation of his own practice and how he teaches. It is from a place of gratitude and deep honor that he opens his heart and Self to share with anyone who seeks.</p>
 
                             <div className='link_wrap text-center'>
-                                <Link 
+                                <button 
+                                    onClick={()=> {handlePageTransition()}}
                                     className='uppercase grey link' 
-                                    to='/services'
                                 >
                                     Practice With Me
                                     <div className='border-bottom text-center'></div>
-                                </Link>
+                                </button>
                             </div>
                         </motion.div>
                     </section>
                 </main>
             </div>
+            <div className={active ? 'page-transition cream active' : 'page-transition cream'}></div>
         </>
     );
 }

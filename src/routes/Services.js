@@ -7,6 +7,7 @@ import david3 from '../images/david_hex-4.png';
 import { motion } from "framer-motion";
 
 export default function Services(props) {
+    
     const [active1, setActive1] = useState(false);
     const [active2, setActive2] = useState(false);
     const [active3, setActive3] = useState(false);
@@ -29,9 +30,19 @@ export default function Services(props) {
         }
     }
 
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
+
     return (
         <>
-            <div className='small_width'>
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={variants}
+                className='small_width'
+            >
                 <main id='services'>
                     <section className='content'>
                         <h2 className='h1'>Services</h2>
@@ -127,7 +138,7 @@ export default function Services(props) {
                         </div>
                     </section>
                 </main>
-            </div>
+            </motion.div>
         </>
     );
 }
