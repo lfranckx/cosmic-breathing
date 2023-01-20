@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import * as emailjs from 'emailjs-com';
 import { Helmet } from 'react-helmet';
+import { motion } from "framer-motion";
 
 const Connect = () => {
     useEffect(() => {
@@ -62,9 +63,19 @@ const Connect = () => {
         message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters")
     });
 
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    }
+
     return (
     <>
-        <div className='small_width connect-page'>
+        <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            className='small_width connect-page'
+        >
             <main id='connect'>
                 <section className='content'>
                     <h2 className='h1'>Connect</h2>
@@ -214,7 +225,7 @@ const Connect = () => {
                     </div>
                 </section>
             </main>
-        </div>
+        </motion.div>
     </>
     );
 }

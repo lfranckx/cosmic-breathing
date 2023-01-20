@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Services.scss';
 import david1 from '../images/david_hex-2.png';
 import david2 from '../images/david_hex-3.png';
@@ -8,9 +8,20 @@ import { motion } from "framer-motion";
 
 export default function Services(props) {
     
+    const [active, setActive] = useState(false);
     const [active1, setActive1] = useState(false);
     const [active2, setActive2] = useState(false);
     const [active3, setActive3] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handlePageTransition = () => {
+        setActive(!active);
+        setTimeout(() => {
+            setActive(false);
+            navigate('/connect');
+        }, 1000)
+    }
 
     const handleSetActives = (el) => {
         if (el === 1) {
@@ -72,7 +83,7 @@ export default function Services(props) {
                                     </div>
 
                                     <div className='btn-wrap'>
-                                        <Link to='/connect' className='btn' >Book Now</Link>
+                                        <button onClick={()=> {handlePageTransition()}} className='btn' >Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +112,7 @@ export default function Services(props) {
                                     </div>
 
                                     <div className='btn-wrap'>
-                                        <Link to='/connect' className='btn' >Book Now</Link>
+                                        <button onClick={()=> {handlePageTransition()}} className='btn' >Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +142,7 @@ export default function Services(props) {
                                     </div>
 
                                     <div className='btn-wrap'>
-                                        <Link to='/connect' className='btn' >Book Now</Link>
+                                        <button onClick={()=> {handlePageTransition()}} className='btn' >Book Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,6 +150,8 @@ export default function Services(props) {
                     </section>
                 </main>
             </motion.div>
+
+            <div className={active ? 'page-transition grey active' : 'page-transition grey'}></div>
         </>
     );
 }

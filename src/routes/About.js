@@ -77,7 +77,7 @@ export default function About(props) {
                     </section>
                 </main>
             </div>
-            <div className={active ? 'page-transition cream active' : 'page-transition cream'}></div>
+            <div className={active ? 'page-transition grey active' : 'page-transition grey'}></div>
         </>
     );
 }
