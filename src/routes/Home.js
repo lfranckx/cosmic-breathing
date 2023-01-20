@@ -27,7 +27,7 @@ export default function Home(props) {
                             <span>Yoga in the Himalayan Tradition</span>
                         </h2>
                     </div>
-                    <h3 className='text-center'>Integrated Approach to Personal Expansion</h3>
+                    <h2 className='text-center'>Integrated Approach to Personal Expansion</h2>
                 </div>
             </main>
         </motion.div>
