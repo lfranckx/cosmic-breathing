@@ -217,7 +217,7 @@ button[disabled=disabled], button:disabled {
     }
 
     &.active {
-        height: 116%;
+        height: 160%;
     }
 }
 
@@ -278,6 +278,8 @@ button[disabled=disabled], button:disabled {
         font-size: $larger-text * .8;
     }
 }
+
+
 
 @media only screen and (max-width:600px) {
     h1, .h1 {
