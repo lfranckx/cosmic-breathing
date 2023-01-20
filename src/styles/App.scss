@@ -54,8 +54,48 @@ button {
     cursor: pointer;
 }
 
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: solid 1px $black;
+    padding: 4px;
+    color: $black;
+    font-size: $reg-text;
+}
+
+label {
+    text-align: left;
+    text-transform: lowercase;
+    font-size: $small-text;
+    font-weight: 600;
+    color: $black;
+}
+
 .absolute {
     position: absolute;
+}
+
+.btn {
+    background: $blue;
+    padding: 8px 24px;
+    color: $cream;
+    font-family: $font1;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    border-radius: 4px;
+    transition: all ease-in-out .18s;
+    min-width: 120px;
+
+    &:hover {
+        border-radius: 20px;
+    }
 }
 
 .circle {
@@ -67,6 +107,12 @@ button {
 
 .cream {
     color: $cream;
+}
+
+.error {
+    color: $blue;
+    font-size: $small-text;
+    font-weight: 400;
 }
 
 .flex {

@@ -1,0 +1,44 @@
+@import "./vars";
+#connect {
+    .content {
+        .h1 {
+            margin-bottom: 2rem;
+        }
+
+        .form-wrap {
+            .form {
+                .field-wrap {
+                    width: 100%;
+                    margin: 8px;
+                    
+                    .flex {
+                        align-items: flex-start;
+
+                        input {
+                            width: 100%;
+                        }
+
+                        label {
+                            letter-spacing: 1.4px;
+                            padding: 4px;
+                        }
+
+                        select {
+                            width: 100%;
+                            background: none;
+                            border: none;
+                            border-bottom: solid 1px $black;
+                        }
+                    }
+                }
+
+                .btn-wrap {
+                    margin: 20px 8px;
+                    .btn {
+
+                    }
+                }
+            }
+        }
+    }
+}

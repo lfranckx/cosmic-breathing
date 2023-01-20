@@ -81,29 +81,27 @@
             .item-content {
                 position: relative;
                 padding: 8px;
-                display: flex;
                 height: auto;
                 transition: all ease-in .4s;
 
-                .text-wrap {
-                    position: relative;
-                }
+                .content-wrap {
+                    display: flex;
 
-                .image-wrap {
-                    margin-top: 10px;
-                    margin-right: -25px;
-                    img {
-                        max-width: 260px;
+                    .text-wrap {
+                        position: relative;
+                    }
+
+                    .image-wrap {
+                        margin-top: 10px;
+                        margin-right: -25px;
+                        img {
+                            max-width: 260px;
+                        }
                     }
                 }
 
-                .padding {
-                    position: absolute;
-                    height: auto;
-
-                    &.hidden {
-                        padding: 0;
-                    }
+                .btn-wrap {
+                    margin: 12px;
                 }
 
                 &.hidden {

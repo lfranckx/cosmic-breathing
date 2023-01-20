@@ -15,7 +15,7 @@ const Connect = () => {
     const [message, handleMessage] = useState('');
 
     const submitForm = (values) => {
-        handleButtonState("Sending");
+        handleButtonState("Sending...");
         const newValues = {
             first_name: values.first_name,
             last_name: values.last_name,
@@ -23,20 +23,19 @@ const Connect = () => {
             tel:  values.tel,
             question_1: values.question_1,
             question_2: values.question_2,
+            goals: values.goals,
             message: values.message
         }
 
-        console.log(newValues);
-
-        // try {
-        //     emailjs.send("", "", newValues, "")
-        //     .then(res => {
-        //         handleButtonState('Sent');
-        //         handleButtonDisabled(true);
-        //     })
-        // } catch (error) {
-        //     handleMessage(error.message);
-        // }
+        try {
+            emailjs.send("service_mwwn0ge", "", newValues, "")
+            .then(res => {
+                handleButtonState('Sent');
+                handleButtonDisabled(true);
+            })
+        } catch (error) {
+            handleMessage(error.message);
+        }
     }
 
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -56,16 +55,16 @@ const Connect = () => {
         first_name: Yup.string().min(2, '* First name is too short').max(20, "* 20 maximum characters").required('* Required'),
         last_name: Yup.string().min(2, '* Last name is too short').max(20, "* 20 maximum characters").required('* Required'),
         email: Yup.string().email("* Invalid email").required("* Required"),
-        tel: Yup.string().matches(phoneRegExp, `* This doesn't look like a phone number`).max(10, '* Phone number is too long').required("* Required"),
+        tel: Yup.string().matches(phoneRegExp, `* This doesn't look like a phone number`).max(15, '* Phone number is too long').required("* Required"),
         question_1: Yup.string().oneOf(Object.values(referredBy), "* Must select a valid option").required("* Required"),
         question_2: Yup.string().oneOf(Object.values(services), "* Must select a valid option").required("* Required"),
         goals: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters").required("* Required"),
-        message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters").required("* Required")
+        message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters")
     });
 
     return (
     <>
-        <div className='page_width'>
+        <div className='small_width'>
             <main id='connect'>
                 <section className='content'>
                     <h2 className='h1'>Connect</h2>
@@ -73,11 +72,13 @@ const Connect = () => {
                     <div className='form-wrap'>
                         <Formik 
                             initialValues={{ first_name: "", last_name: "", email: "", tel: "", question_1: "", question_2: "", message: "" }}
+                            validationSchema={contactFormSchema}
+                            onSubmit={submitForm}
                         > 
-                            <Form id='contact-form'>
+                            <Form id='contact-form' className='form'>
                                 <fieldset className='fieldset'>
                                     <div className='flex'>
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="first_name" id='first_name'>
                                                     First
@@ -89,7 +90,7 @@ const Connect = () => {
                                             <ErrorMessage component="div" className='error' name='first_name' />
                                         </div>
 
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="last_name" id='last_name'>
                                                     Last
@@ -103,7 +104,7 @@ const Connect = () => {
                                     </div>
 
                                     <div className='flex'>
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="email" id='email'>
                                                     Email
@@ -115,7 +116,7 @@ const Connect = () => {
                                             <ErrorMessage component="div" className='error' name='email' />
                                         </div>
 
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="tel" id='tel'>
                                                     Tel
@@ -129,7 +130,7 @@ const Connect = () => {
                                     </div>
 
                                     <div className='flex'>
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="question_1" id='question_1'>
                                                     How did you find me?
@@ -148,7 +149,7 @@ const Connect = () => {
                                             <ErrorMessage component="div" className='error' name='question_1' />
                                         </div>
 
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="question_2" id='question_2'>
                                                     Which service are you interested in?
@@ -168,7 +169,7 @@ const Connect = () => {
                                     </div>
 
                                     <div className='flex'>
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="goals" id='goals'>
                                                     What are your goals?
@@ -177,10 +178,10 @@ const Connect = () => {
                                                     name='goals'
                                                 />
                                             </div>
-                                            <ErrorMessage component="div" className='error' name='question_2' />
+                                            <ErrorMessage component="div" className='error' name='goals' />
                                         </div>
 
-                                        <div className='field_wrap'>
+                                        <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="message" id='message'>
                                                     How else can I help you?
@@ -189,7 +190,7 @@ const Connect = () => {
                                                     name='message'
                                                 />
                                             </div>
-                                            <ErrorMessage component="div" className='error' name='question_2' />
+                                            <ErrorMessage component="div" className='error' name='message' />
                                         </div>
                                     </div>
                                 </fieldset>
