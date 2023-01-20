@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import mountain from '../images/mountain_hex.png';
 import david from '../images/david_hex.png';
 import girl from '../images/girl_hex.png';
 import '../styles/About.scss';
+import useMousePosition from '../components/UseMousePosition';
 
 export default function About(props) {
+    const mousePosition = useMousePosition();
+
+    const defaultSettings = {
+        reverse: false,
+        max: 35,
+        perspective: 1000,
+        easing: 'cubic-bezier(.03,.98,.52,.99)',
+        scale: '1.1',
+        speed: '1000',
+        transition: true,
+        axis: null,
+        reset: true
+    }
+
     return (
         <>
-            <div className='page_width'>
+            <div className='page_width'
+            >
                 <main id='about'>
                     <section className='content'>
                         <div className='images'>
@@ -16,7 +32,7 @@ export default function About(props) {
                                 <img src={mountain} alt='Himalayan Mountain' />
                             </div>
                             <div className='image_wrap absolute'>
-                                <img className='relative top' 
+                                <img className='relative top animate' 
                                     src={david} alt='David Meditating on the beach' />
                             </div>
                             <div className='image_wrap relative'>
