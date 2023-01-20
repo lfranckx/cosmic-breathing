@@ -12,9 +12,14 @@ import Connect from '../routes/Connect';
 function App() {
   const location = useLocation();
 
+  const homeBgColor = location.pathname === '/' ? 'cream' : '';
+  const aboutBgColor = location.pathname === '/about' ? 'black' : '';
+  const servicesBgColor = location.pathname === '/services' ? 'cream' : '';
+  const connectBgColor = location.pathname === '/connect' ? 'grey' : '';
+
   return (
     <>
-      <div id='app' className={location.pathname === '/about' ? 'black' : ''}>
+      <div id='app' className={`${homeBgColor} ${aboutBgColor} ${servicesBgColor} ${connectBgColor}`}>
         <Header />
         <Routes>
           <Route exact path='/' element={<Home/>} />

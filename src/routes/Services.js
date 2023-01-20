@@ -36,18 +36,15 @@ export default function Services(props) {
 
                         <div className='accordion'>
                             <div className='item item-1'>
-                                <div className='flex row'>
-                                    <h3>Meditation Initiation</h3>
-                                    <button 
-                                        onClick={() => {handleSetActives(1)}}
-                                        className={'btn-opener'} 
-                                    >
+                                <button className='flex row' onClick={() => {handleSetActives(1)}}>
+                                    <span className='h3'>Meditation Initiation</span>
+                                    <div className='opener'>
                                         <div className={'wrap'}>
                                             <span className={active1 ? 'active line line-1' : 'line line-1'}></span>
                                             <span className={active1 ? 'active line line-2' : 'line line-2'}></span>
                                         </div>
-                                    </button>
-                                </div>
+                                    </div>
+                                </button>
 
                                 <div className={active1 ? 'item-content' : 'item-content hidden'}>
                                     <div className='text-wrap'>
@@ -62,19 +59,16 @@ export default function Services(props) {
                             </div>
 
                             <div className='item item-2'>
-                                <div className='flex row'>
-                                    <h3>Sadhana Development</h3>
+                                <button className='flex row' onClick={() => {handleSetActives(2)}}>
+                                    <span className='h3'>Sadhana Development</span>
 
-                                    <button
-                                        onClick={() => {handleSetActives(2)}}
-                                        className={'btn-opener'}
-                                    >
+                                    <div className={'opener'}>
                                         <div className={'wrap'}>
                                             <span className={active2 ? 'active line line-1' : 'line line-1'}></span>
                                             <span className={active2 ? 'active line line-2' : 'line line-2'}></span>
                                         </div>
-                                    </button>
-                                </div>
+                                    </div>
+                                </button>
 
                                 <div className={active2 ? 'item-content' : 'item-content hidden'}>
                                     <div className='text-wrap'>
@@ -89,19 +83,16 @@ export default function Services(props) {
                             </div>
                             
                             <div className='item item-3'>
-                                <div className='flex row'>
-                                    <h3>Himalayan Integrated Practice</h3>
+                                <button className='flex row' onClick={() => {handleSetActives(3)}}>
+                                    <span className='h3'>Himalayan Integrated Practice</span>
 
-                                    <button
-                                        onClick={() => {handleSetActives(3)}} 
-                                        className={'btn-opener'}
-                                    >
+                                    <div className={'opener'}>
                                         <div className={'wrap'}>
                                         <span className={active3 ? 'active line line-1' : 'line line-1'}></span>
                                             <span className={active3 ? 'active line line-2' : 'line line-2'}></span>
                                         </div>
-                                    </button>
-                                </div>
+                                    </div>
+                                </button>
 
                                 <div className={active3 ? 'item-content' : 'item-content hidden'}>
                                     <div className='text-wrap'>

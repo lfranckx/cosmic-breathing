@@ -6,6 +6,11 @@ import '../styles/Header.scss';
 export default function Header(props) {
     const [active, setActive] = useState(false);
     const location = useLocation();
+
+    const homeColor = location.pathname === '/' ? 'p1' : 'p1';
+    const aboutColor = location.pathname === '/about' ? 'cream' : 'p1';
+    const servicesColor = location.pathname === '/services' ? 'p1' : 'p1';
+    const connectColor = location.pathname === '/connect' ? 'p1' : 'p1';
  
     return (
         <>
@@ -14,8 +19,8 @@ export default function Header(props) {
                     <div className='flex row'>
                         <Link to={'/'}>
                             <div className='logo_text_wrap'>
-                                {active ? <></> : <h1 className={location.pathname === '/about' ? 'cream p1' : 'p1'}>Cosmic Breathing</h1>}
-                                {active ? <h1 className='p1 top_layer'>Cosmic Breathing</h1> : <></>}
+                                {active ? <h1 className='p1 top_layer'>Cosmic Breathing</h1> 
+                                        : <h1 className={`${homeColor} ${aboutColor} ${servicesColor} ${connectColor}`}>Cosmic Breathing</h1>}
                                 <div className='logo_wrap'>
                                     <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />
                                 </div>

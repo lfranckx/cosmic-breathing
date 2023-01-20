@@ -31,7 +31,7 @@ export default function About(props) {
                             <p className='cream'>The life-altering effects of these practices are undeniable, truly limitless and can be seen all throughout his life. The power of the breath, the deep silence of meditation, and the activation of untapped energy are all at the foundation of his own practice and how he teaches. It is from a place of gratitude and deep honor that he opens his heart and Self to share with anyone who seeks.</p>
 
                             <div className='link_wrap text-center'>
-                                <Link className='uppercase grey link' to='/servies'>
+                                <Link className='uppercase grey link' to='/services'>
                                     Practice With Me
                                     <div className='border-bottom text-center'></div>
                                 </Link>
