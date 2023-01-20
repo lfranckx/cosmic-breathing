@@ -1,7 +1,7 @@
 @import "./vars";
 
 #about {
-    padding: 200px 0 100px;
+    padding: 200px 0 50px;
     
     .content {
         display: flex;
@@ -18,7 +18,6 @@
                     right: 180px;
                     bottom: 160px;
                 }
-
 
                 .top {
                     z-index: 4;
@@ -82,9 +81,33 @@
 
 @media only screen and (max-width: 750px) {
     #about {
-
         .content {
-            
+            .images {
+                .image_wrap {
+                    img {
+                        max-width: 320px * .6;
+                    }
+
+                    .relative {
+                        right: 100px;
+                        bottom: 100px;
+                    }
+    
+                    .top {
+                        z-index: 4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about {
+        .content {
+            .images {
+                display: none;
+            }
         }
     }
 }

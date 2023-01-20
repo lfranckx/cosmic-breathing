@@ -1,6 +1,8 @@
 @import "./vars";
 
 #services {
+    padding: 200px 0;
+
     .h1 {
         margin-bottom: 2rem;
     }
@@ -101,7 +103,7 @@
                 }
 
                 .btn-wrap {
-                    margin: 12px;
+                    margin: 12px 0;
                 }
 
                 &.hidden {
