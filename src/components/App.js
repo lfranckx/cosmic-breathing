@@ -22,7 +22,7 @@ function App() {
       <div id='app' className={`${homeBgColor} ${aboutBgColor} ${servicesBgColor} ${connectBgColor}`}>
         <Header />
         <Routes>
-          <Route exact path='/' element={<Home/>} />
+          <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About />} />
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />

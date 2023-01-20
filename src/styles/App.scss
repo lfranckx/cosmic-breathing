@@ -4,6 +4,7 @@
     font-family: $font1, sans-serif;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            color: $black;
 }
 
 body {
@@ -29,6 +30,7 @@ h1, h2, h3 {
 p {
     line-height: 1.8;
     margin-bottom: 12px;
+    color: $black;
 }
 
 a {

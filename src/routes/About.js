@@ -35,7 +35,6 @@ export default function About(props) {
                                     Practice With Me
                                     <div className='border-bottom text-center'></div>
                                 </Link>
-                                
                             </div>
                         </div>
                     </section>
