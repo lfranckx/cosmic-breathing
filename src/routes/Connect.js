@@ -97,7 +97,7 @@ const Connect = () => {
                         > 
                             <Form id='contact-form' className='form'>
                                 <fieldset className='fieldset'>
-                                    <div className='flex'>
+                                    <div className='flex wrap'>
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="first_name" id='first_name'>
@@ -123,7 +123,7 @@ const Connect = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex wrap'>
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="email" id='email'>
@@ -149,7 +149,7 @@ const Connect = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex wrap'>
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="referral" id='referral'>
@@ -188,7 +188,7 @@ const Connect = () => {
                                         </div>
                                     </div>
 
-                                    <div className='flex'>
+                                    <div className='flex wrap'>
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
                                                 <label htmlFor="goals" id='goals'>
