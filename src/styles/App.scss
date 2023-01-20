@@ -42,6 +42,14 @@ h1, .h1 {
     color: $black;
 }
 
+h3, .h3 {
+    font-family: $font2;
+    font-size: $larger-text;
+    color: $bronze;
+    text-transform: none;
+    font-weight: 500;
+}
+
 button {
     background: none;
     padding: 0;
@@ -265,10 +273,20 @@ button[disabled=disabled], button:disabled {
     .p1 {
         font-size: $reg-text * .8;
     }
+
+    h3, .h3 {
+        font-size: $larger-text * .8;
+    }
 }
 
 @media only screen and (max-width:600px) {
     h1, .h1 {
         font-size: $giant-text * .6;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    h3, .h3 {
+        font-size: $larger-text * .6;
     }
 }

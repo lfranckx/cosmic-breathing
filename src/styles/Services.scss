@@ -14,14 +14,6 @@
             .row {
                 padding: 12px 4px;
     
-                .h3 {
-                    font-family: $font2;
-                    font-size: $larger-text;
-                    color: $bronze;
-                    text-transform: none;
-                    font-weight: 500;
-                }
-    
                 .opener {
                     display: flex;
                     flex-direction: column;
@@ -96,6 +88,7 @@
                     .image-wrap {
                         margin-top: 10px;
                         margin-right: -25px;
+
                         img {
                             max-width: 260px;
                         }
@@ -111,6 +104,26 @@
                     overflow: hidden;
                     opacity: 0;
                     padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #services {
+        .accordion {
+            .item {
+                .item-content {
+                    .content-wrap {
+                        flex-direction: column-reverse;
+
+                        .image-wrap {
+                            img {
+                                max-width: 200px;
+                            }
+                        }
+                    }
                 }
             }
         }
