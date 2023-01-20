@@ -45,8 +45,14 @@ export default function AboutNew(props) {
                                 <div className='overlay'></div>
                             </li>
                         </ul>
+
+                        <div className='link_wrap text-center'>
+                            <Link className='uppercase grey link' to='/services'>
+                                Practice With Me
+                                <div className='border-bottom text-center'></div>
+                            </Link>
+                        </div>
                     </section>
-                    
                 </main>
         </div>
         </>
