@@ -4,6 +4,7 @@ import '../styles/Services.scss';
 import david1 from '../images/david_hex-2.png';
 import david2 from '../images/david_hex-3.png';
 import david3 from '../images/david_hex-4.png';
+import { motion } from "framer-motion";
 
 export default function Services(props) {
     const [active1, setActive1] = useState(false);

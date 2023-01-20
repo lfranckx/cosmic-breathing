@@ -21,14 +21,14 @@ const Connect = () => {
             last_name: values.last_name,
             email: values.email,
             tel:  values.tel,
-            question_1: values.question_1,
-            question_2: values.question_2,
+            referral: values.referral,
+            service: values.service,
             goals: values.goals,
             message: values.message
         }
 
         try {
-            emailjs.send("service_mwwn0ge", "", newValues, "")
+            emailjs.send("service_mwwn0ge", "template_cjrhc8h", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
                 handleButtonState('Sent');
                 handleButtonDisabled(true);
@@ -56,8 +56,8 @@ const Connect = () => {
         last_name: Yup.string().min(2, '* Last name is too short').max(20, "* 20 maximum characters").required('* Required'),
         email: Yup.string().email("* Invalid email").required("* Required"),
         tel: Yup.string().matches(phoneRegExp, `* This doesn't look like a phone number`).max(15, '* Phone number is too long').required("* Required"),
-        question_1: Yup.string().oneOf(Object.values(referredBy), "* Must select a valid option").required("* Required"),
-        question_2: Yup.string().oneOf(Object.values(services), "* Must select a valid option").required("* Required"),
+        referral: Yup.string().oneOf(Object.values(referredBy), "* Must select a valid option").required("* Required"),
+        service: Yup.string().oneOf(Object.values(services), "* Must select a valid option").required("* Required"),
         goals: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters").required("* Required"),
         message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters")
     });
@@ -80,7 +80,7 @@ const Connect = () => {
                     </div>
                     <div className='form-wrap'>
                         <Formik 
-                            initialValues={{ first_name: "", last_name: "", email: "", tel: "", question_1: "", question_2: "", message: "" }}
+                            initialValues={{ first_name: "", last_name: "", email: "", tel: "", referral: "", service: "", message: "" }}
                             validationSchema={contactFormSchema}
                             onSubmit={submitForm}
                         > 
@@ -141,11 +141,11 @@ const Connect = () => {
                                     <div className='flex'>
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
-                                                <label htmlFor="question_1" id='question_1'>
+                                                <label htmlFor="referral" id='referral'>
                                                     How did you find me?
                                                 </label>
                                                 <Field
-                                                    name='question_1'
+                                                    name='referral'
                                                     as='select'
                                                 >
                                                     <option value=''>Select an Option</option>
@@ -155,16 +155,16 @@ const Connect = () => {
                                                     <option value='Other'>Other</option>
                                                 </Field>
                                             </div>
-                                            <ErrorMessage component="div" className='error' name='question_1' />
+                                            <ErrorMessage component="div" className='error' name='referral' />
                                         </div>
 
                                         <div className='field-wrap'>
                                             <div className='flex column-reverse'>
-                                                <label htmlFor="question_2" id='question_2'>
+                                                <label htmlFor="service" id='service'>
                                                     Which service are you interested in?
                                                 </label>
                                                 <Field
-                                                    name='question_2'
+                                                    name='service'
                                                     as='select'
                                                 >
                                                     <option value=''>Select an Option</option>
@@ -173,7 +173,7 @@ const Connect = () => {
                                                     <option value='Himalayan Integrated Practice'>Himalayan Integrated Practice</option>
                                                 </Field>
                                             </div>
-                                            <ErrorMessage component="div" className='error' name='question_2' />
+                                            <ErrorMessage component="div" className='error' name='service' />
                                         </div>
                                     </div>
 

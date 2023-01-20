@@ -4,43 +4,52 @@ import mountain from '../images/mountain_hex.png';
 import david from '../images/david_hex.png';
 import girl from '../images/girl_hex.png';
 import '../styles/About.scss';
-import useMousePosition from '../components/UseMousePosition';
+import { motion } from "framer-motion";
 
 export default function About(props) {
-    const mousePosition = useMousePosition();
 
-    const defaultSettings = {
-        reverse: false,
-        max: 35,
-        perspective: 1000,
-        easing: 'cubic-bezier(.03,.98,.52,.99)',
-        scale: '1.1',
-        speed: '1000',
-        transition: true,
-        axis: null,
-        reset: true
+    const [active, setActive] = useState(false);
+
+    const variants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
     }
-
+    
     return (
         <>
             <div className='page_width'
             >
                 <main id='about'>
                     <section className='content'>
-                        <div className='images'>
-                            <div className='image_wrap'>
+                        <div 
+                            className='images'
+                        >
+                            <div 
+                                className='image_wrap'
+                            >
                                 <img src={mountain} alt='Himalayan Mountain' />
                             </div>
-                            <div className='image_wrap absolute'>
+
+                            <div 
+                                className='image_wrap absolute'
+                            >
                                 <img className='relative top animate' 
                                     src={david} alt='David Meditating on the beach' />
                             </div>
-                            <div className='image_wrap relative'>
+
+                            <div 
+                                className='image_wrap relative'
+                            >
                                 <img src={girl} alt='Girl meditating at the park' />
                             </div>
                         </div>
 
-                        <div className='text_wrap'>
+                        <motion.div 
+                            initial="hidden"
+                            animate="visible"
+                            variants={variants}
+                            className='text_wrap'
+                        >
                             <h2 className='h1'>About</h2>
                             <p className='cream'>The practices of Cosmic Breathing have their roots in the Vedantic lineage of the Himalayas. The great yogic masters passed down the traditions and wisdom over thousands of years verbally until recording them in writing in the Vedas, Upanishads and other sacred yogic scriptures. These teachings are holistic, ever-expanding, and offer transformation to every aspect of the mind, body, and soul. There are no dogmatic beliefs, the teachings are compatible with all faiths, and this wisdom is available to every human being regardless of race, gender expression, or sexuality. Integrating and applying these teachings to our lives allows us radical transformation, trust, fearlessness, compassion, healing and exponential growth.</p>
                             <p className='cream'>David is a lover of learning and expression, a forever student. From this place of curiosity he discovered yoga in many modalities in southern California where he has practiced for the last decade. After multiple journeys to the foothills of the Himalayas in India to submerge himself in the ancient wisdom, along with years of consistent, devotional practice, David has welcomed the role of sharing these transformational teachings with others.</p>
@@ -55,7 +64,7 @@ export default function About(props) {
                                     <div className='border-bottom text-center'></div>
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     </section>
                 </main>
             </div>
