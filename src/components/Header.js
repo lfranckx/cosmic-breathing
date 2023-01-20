@@ -7,19 +7,20 @@ export default function Header(props) {
     const [active, setActive] = useState(false);
     const location = useLocation();
 
-    const homeTextColor = location.pathname === '/' ? 'p1' : 'p1';
-    const aboutTextColor = location.pathname === '/about' ? 'bronze p1' : 'p1';
-    const servicesTextColor = location.pathname === '/services' ? 'p1' : 'p1';
-    const connectTextColor = location.pathname === '/connect' ? 'p1' : 'p1';
-
-    const activeMenuTextColorHome = location.pathname === '/' ? 'cream' : 'p1';
-    const activeMenuTextColorServices = location.pathname === '/services' ? 'cream' : 'p1';
+    const showMenu = active ? 'show' : 'close';
 
     const homeBgColor = location.pathname === '/' ? 'black' : '';
     const aboutBgColor = location.pathname === '/about' ? 'white' : '';
     const servicesBgColor = location.pathname === '/services' ? 'black' : '';
     const connectBgColor = location.pathname === '/connect' ? 'white' : '';
-    const activeScreen = active ? 'show' : '';
+
+    const homeTextColor = location.pathname === '/' ? 'p1' : 'p1';
+    const aboutTextColor = location.pathname === '/about' ? 'p1 bronze' : 'p1';
+    const servicesTextColor = location.pathname === '/services' ? 'p1' : 'p1';
+    const connectTextColor = location.pathname === '/connect' ? 'p1' : 'p1';
+
+    const activeMenuTextColorHome = location.pathname === '/' ? 'cream' : 'p1';
+    const activeMenuTextColorServices = location.pathname === '/services' ? 'cream' : 'p1';
 
     const homeLinkColor = location.pathname === '/' ? 'bronze' : '';
     const aboutLinkColor = location.pathname === '/about' ? 'black' : '';
@@ -61,7 +62,7 @@ export default function Header(props) {
                     </div>
                 </header>
             </div>
-            <div id='menu' className={`${homeBgColor} ${aboutBgColor} ${servicesBgColor} ${connectBgColor} ${activeScreen}`}>
+            <div id='menu' className={`${homeBgColor} ${aboutBgColor} ${servicesBgColor} ${connectBgColor} ${showMenu}`}>
                 <div className='content'>
                     <div className='link_wrap'>
                         <Link className={`h1 link ${homeLinkColor} ${aboutLinkColor} ${servicesLinkColor} ${connectLinkColor}`} to='/' onClick={() => {setActive(!active)}}>Index</Link>

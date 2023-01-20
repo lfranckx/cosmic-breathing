@@ -12,6 +12,7 @@ header {
         .p1 {
             color: $black;
             z-index: 13;
+            &.black { color: $black; }
             &.cream { color: $cream; }
             &.bronze { color: $bronze; }
         }
@@ -176,6 +177,12 @@ header {
                 }
             }
         }
+    }
+
+    &.close {
+        height: 0;
+        top: auto;
+        bottom: 0;
     }
 
     .content {
