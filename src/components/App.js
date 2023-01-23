@@ -8,7 +8,6 @@ import Header from './Header';
 import About from '../routes/About';
 import Services from '../routes/Services';
 import Connect from '../routes/Connect';
-import AboutNew from '../routes/About-New';
 
 function App() {
   const location = useLocation();

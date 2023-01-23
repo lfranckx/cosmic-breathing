@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import mountain from '../images/mountain_hex.png';
 import david from '../images/david_hex.png';
 import girl from '../images/girl_hex.png';

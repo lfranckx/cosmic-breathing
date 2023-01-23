@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo-notext.png';
 import '../styles/Header.scss';
+import { motion } from 'framer-motion';
 
 export default function Header(props) {
     const [active, setActive] = useState(false);
@@ -26,6 +27,17 @@ export default function Header(props) {
     const aboutLinkColor = location.pathname === '/about' ? 'black' : '';
     const servicesLinkColor = location.pathname === '/services' ? 'bronze' : '';
     const connectLinkColor = location.pathname === '/connect' ? 'black' : '';
+
+    const variants = {
+        open: {
+            transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+        },
+        closed: {
+            transition: { staggerChildren: 0.05, staggerDirection: -1 }
+        }
+    };
+
+    const ids = [1,2,3,4];
     
     return (
         <>
@@ -64,18 +76,18 @@ export default function Header(props) {
             </div>
             <div id='menu' className={`${homeBgColor} ${aboutBgColor} ${servicesBgColor} ${connectBgColor} ${showMenu}`}>
                 <div className='content'>
-                    <div className='link_wrap'>
+                    <motion.div className='link_wrap' variants={variants}>
                         <Link className={`h1 link ${homeLinkColor} ${aboutLinkColor} ${servicesLinkColor} ${connectLinkColor}`} to='/' onClick={() => {setActive(!active)}}>Index</Link>
-                    </div>
-                    <div className='link_wrap right'>
+                    </motion.div>
+                    <motion.div className='link_wrap right' variants={variants}>
                         <Link className={`h1 link ${homeLinkColor} ${aboutLinkColor} ${servicesLinkColor} ${connectLinkColor}`} to='/about' onClick={() => {setActive(!active)}}>About</Link>
-                    </div>
-                    <div className='link_wrap'>
+                    </motion.div>
+                    <motion.div className='link_wrap' variants={variants}>
                         <Link className={`h1 link ${homeLinkColor} ${aboutLinkColor} ${servicesLinkColor} ${connectLinkColor}`} to='/services' onClick={() => {setActive(!active)}}>Services</Link>
-                    </div>
-                    <div className='link_wrap left'>
+                    </motion.div>
+                    <motion.div className='link_wrap left' variants={variants}>
                         <Link className={`h1 link ${homeLinkColor} ${aboutLinkColor} ${servicesLinkColor} ${connectLinkColor}`} to='/connect' onClick={() => {setActive(!active)}}>Connect</Link>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </>

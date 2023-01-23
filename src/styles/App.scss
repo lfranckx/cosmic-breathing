@@ -162,6 +162,9 @@ button[disabled=disabled], button:disabled {
 .grey {
     color: $grey;
 }
+.hide {
+    display: none;
+}
 
 .logo {
     max-width: 180px;
