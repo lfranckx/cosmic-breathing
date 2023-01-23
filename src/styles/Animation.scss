@@ -12,6 +12,8 @@
 .content-wrap {
     position: relative;
     display: flex;
+    justify-content: center;
+    width: 100%;
     
     .hex-wrap {
         position: relative;
@@ -66,4 +68,25 @@
     0% { fill: transparent; }
     50% { fill: $babyblue; }
     100% { fill: transparent; }
+}
+
+@media (max-width: 600px) {
+    .content-wrap {
+        .hex-wrap {
+            &.left {
+                left: 90px;
+                top: 60px;
+            }
+    
+            &.right {
+                right: 90px;
+                top: 60px;
+            }
+        }
+    }
+
+    .hex {
+        width: 156px;
+        height: 178.8px;
+    }
 }
