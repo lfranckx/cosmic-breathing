@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/App.scss';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 import Home from '../routes/Home';
 import Header from './Header';
@@ -24,7 +24,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About />} />
-          {/* <Route path='/about' element={<AboutNew />} /> */}
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />
         </Routes>
