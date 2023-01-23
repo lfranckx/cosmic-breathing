@@ -31,3 +31,9 @@
         color: $black;
     }
 }
+
+@media (max-width: 600px) {
+    #home {
+        margin-top: -100px;
+    }
+}
