@@ -23,6 +23,9 @@
                 &.black { color: $black; }
                 &.cream { color: $cream; }
                 &.bronze { color: $bronze; }
+                @media only screen and (max-width: 750px) {
+                    font-size: $reg-text * .6;
+                }
             }
     
             .logo_wrap {
