@@ -92,6 +92,11 @@ li {
     margin: 0;
 }
 
+audio {
+    opacity: 0;
+    z-index: -1;
+}
+
 .absolute {
     position: absolute;
 }
@@ -115,6 +120,22 @@ li {
     &:hover {
         border-radius: 20px;
     }
+}
+
+.audio-wrap {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 999;
+}
+
+.btn-mute {
+    
+    z-index: 999;
 }
 
 button[disabled=disabled], button:disabled {
@@ -182,7 +203,7 @@ button[disabled=disabled], button:disabled {
 
 .page-width {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 20px;
     width: 100%;
 }
@@ -230,7 +251,7 @@ button[disabled=disabled], button:disabled {
 
 .small-width {
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 20px;
     width: 100%;
 }

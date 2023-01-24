@@ -36,8 +36,6 @@ export default function Header(props) {
             transition: { staggerChildren: 0.05, staggerDirection: -1 }
         }
     };
-
-    const ids = [1,2,3,4];
     
     return (
         <>
