@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Home.scss';
 import { motion } from "framer-motion";
 import Animation from '../components/Animation';
+import music from '../misc/cosmic-breathing.mp4';
 
 export default function Home(props) {
 
@@ -33,6 +34,9 @@ export default function Home(props) {
                             </h2>
                         </div>
                         <h2 className='text-center'>Integrated Approach to Personal Expansion</h2>
+                        <div className='hide'>
+                            <audio src={music} controls autoPlay/>
+                        </div>
                     </div>
                 </main>
             </motion.div>
