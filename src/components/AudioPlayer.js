@@ -1,9 +1,13 @@
 import React, { useState, useRef, useContext, useEffect } from 'react';
-import music from '../misc/cosmic-breathing.mp4';
+import music from '../misc/cosmic-audio.mp3';
 import { useLocation } from 'react-router';
 import { ApplicationContext } from '../context';
 
 export default function AudioPlayer(props) {
+
+    useEffect(() => {
+        
+    }, [])
 
     const location = useLocation();
     const homeTextColor = location.pathname === '/' ? 'p1' : 'p1';
@@ -31,7 +35,7 @@ export default function AudioPlayer(props) {
 
     return (
         <div className='page-width audio-wrap'>
-            <audio ref={audioRef} src={music} controls autoPlay loop/>
+            <audio id='music' ref={audioRef} src={music} controls autoPlay loop/>
             {active ?   <button onClick={togglePlaying} 
                             className={`btn-mute ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}
                         >
@@ -44,7 +48,6 @@ export default function AudioPlayer(props) {
                             {isPlaying ? "Pause" : "Play"}
                             <div className={location.pathname === '/about' ? 'border-bottom bronze' : 'border-bottom'}></div>
                         </button>}
-            
         </div>
     );
 }
