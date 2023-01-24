@@ -30,7 +30,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
