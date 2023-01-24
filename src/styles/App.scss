@@ -220,7 +220,7 @@ button[disabled=disabled], button:disabled {
     }
 
     &.active {
-        height: 116%;
+        height: 200%;
     }
 }
 
@@ -282,12 +282,6 @@ button[disabled=disabled], button:disabled {
     }
 }
 
-@media only screen and (max-width:1000px) {
-    .page-transition.active {
-        height: 140%;
-    }
-}
-
 @media only screen and (max-width:600px) {
     h1, .h1 {
         font-size: $giant-text * .6;
@@ -296,7 +290,7 @@ button[disabled=disabled], button:disabled {
 
 @media only screen and (max-width:750px) {
     .page-transition.active {
-        height: 200%;
+        height: 220%;
     }
 }
 
