@@ -5,10 +5,6 @@ import { ApplicationContext } from '../context';
 
 export default function AudioPlayer(props) {
 
-    useEffect(() => {
-        
-    }, [])
-
     const location = useLocation();
     const homeTextColor = location.pathname === '/' ? 'p1' : 'p1';
     const aboutTextColor = location.pathname === '/about' ? 'p1 bronze' : 'p1';
@@ -20,8 +16,12 @@ export default function AudioPlayer(props) {
     const activeMenuTextColorServices = location.pathname === '/services' ? 'cream' : 'p1';
 
     const audioRef = useRef(null);
-    const [isMuted, setIsMuted] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const { isMuted, setIsMuted } = useContext(ApplicationContext);
+    const { isPlaying, setIsPlaying } = useContext(ApplicationContext);
+
+    // useEffect(() => {
+    //    togglePlaying(true);
+    // }, []);
 
     const toggleMute = () => {
         setIsMuted(!isMuted);
