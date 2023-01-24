@@ -9,6 +9,7 @@ import About from '../routes/About';
 // import AboutNew from '../routes/AboutNew';
 import Services from '../routes/Services';
 import Connect from '../routes/Connect';
+import Footer from './Footer';
 
 function App() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />
         </Routes>
+        <Footer />
       </div>
     </>
   );
