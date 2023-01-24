@@ -41,7 +41,7 @@ export default function Header(props) {
     
     return (
         <>
-            <div className='page_width header_wrap'>
+            <div className='page-width header_wrap'>
                 <header id='header'>
                     <div className='flex row'>
                         <Link to={'/'}>

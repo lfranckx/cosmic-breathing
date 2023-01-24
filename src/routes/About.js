@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mountain from '../images/mountain_hex.png';
-import david from '../images/david_hex.png';
-import girl from '../images/girl_hex.png';
+import mountain from '../images/mountain_hex_1.png';
+import david from '../images/david_hex_1.png';
+import girl from '../images/girl_hex_1.png';
 import '../styles/About.scss';
 import { motion } from "framer-motion";
 
@@ -26,32 +26,29 @@ export default function About(props) {
     
     return (
         <>
-            <div className='page_width'
+            <div className='page-width'
             >
                 <main id='about'>
                     <section className='content'>
-                        <div 
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            variants={variants} 
                             className='images'
                         >
-                            <div 
-                                className='image_wrap'
-                            >
-                                <img src={mountain} alt='Himalayan Mountain' />
+                            <div className='image_wrap left'>
+                                <img className='left' src={mountain} alt='Himalayan Mountain' />
                             </div>
 
-                            <div 
-                                className='image_wrap absolute'
-                            >
+                            <div className='image_wrap absolute'>
                                 <img className='relative top animate' 
                                     src={david} alt='David Meditating on the beach' />
                             </div>
 
-                            <div 
-                                className='image_wrap relative'
-                            >
-                                <img src={girl} alt='Girl meditating at the park' />
+                            <div className='image_wrap relative right'>
+                                <img className='right' src={girl} alt='Girl meditating at the park' />
                             </div>
-                        </div>
+                        </motion.div>
 
                         <motion.div 
                             initial="hidden"

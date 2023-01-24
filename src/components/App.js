@@ -6,6 +6,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from '../routes/Home';
 import Header from './Header';
 import About from '../routes/About';
+// import AboutNew from '../routes/AboutNew';
 import Services from '../routes/Services';
 import Connect from '../routes/Connect';
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/about' element={<About />} />
+          {/* <Route path='/about' element={<AboutNew />} /> */}
           <Route path='/services' element={<Services />} />
           <Route path='/connect' element={<Connect />} />
         </Routes>

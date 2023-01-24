@@ -52,7 +52,7 @@ export default function Services(props) {
                 initial="hidden"
                 animate="visible"
                 variants={variants}
-                className='small_width'
+                className='small-width'
             >
                 <main id='services'>
                     <section className='content'>

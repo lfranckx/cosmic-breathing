@@ -85,19 +85,41 @@
 @media only screen and (max-width: 750px) {
     #about {
         .content {
+            flex-direction: column;
+            width: 100%;
+
             .images {
+                position: initial;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                max-width: 300px;
+                margin: auto;
+
                 .image_wrap {
+                    position: relative;
+
+                    &.left {
+                        left: 100px;
+                    }
+                    &.right {
+                        position: relative;
+                        right: 100px;
+                    }
+
                     img {
                         max-width: 320px * .6;
                     }
 
-                    .relative {
-                        right: 100px;
-                        bottom: 100px;
+                    &.absolute {
+                        position: initial;
                     }
     
                     .top {
                         z-index: 4;
+                        position: relative;
+                        right: 0;
+                        bottom: 100px;
                     }
                 }
             }
@@ -105,11 +127,21 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 420px) {
     #about {
         .content {
             .images {
-                display: none;
+                .image_wrap {
+                    &.left {
+                        left: 80px;
+                    }
+                    &.right {
+                        position: relative;
+                        right: 80px;
+                    }
+
+                    img { max-width: 320px * .5; }
+                }
             }
         }
     }

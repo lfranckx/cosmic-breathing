@@ -74,7 +74,7 @@ const Connect = () => {
             initial="hidden"
             animate="visible"
             variants={variants}
-            className='small_width connect-page'
+            className='small-width connect-page'
         >
             <main id='connect'>
                 <section className='content'>

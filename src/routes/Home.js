@@ -19,7 +19,7 @@ export default function Home(props) {
                 className='home_wrap'
             >
                 <main id='home'>
-                    <div className='small_width'>
+                    <div className='small-width'>
                         <div className='flex column-reverse'>
                             <h1>Cosmic Breathing</h1>
                             <h2>
