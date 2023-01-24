@@ -146,16 +146,18 @@ audio {
         &.bronze {
             background: $bronze;
         }
+
+        &.cream {
+            background: $cream;
+        }
     }
 
     &:hover {
         .border-bottom {
-            width: 160px;
+            width: 120px;
         }
     }
 }
-
-
 
 button[disabled=disabled], button:disabled {
     opacity: .5;

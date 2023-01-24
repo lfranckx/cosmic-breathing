@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext, useEffect } from 'react';
 import music from '../misc/cosmic-breathing.mp4';
 import { useLocation } from 'react-router';
+import { ApplicationContext } from '../context';
 
 export default function AudioPlayer(props) {
 
@@ -10,6 +11,9 @@ export default function AudioPlayer(props) {
     const servicesTextColor = location.pathname === '/services' ? 'p1' : 'p1';
     const connectTextColor = location.pathname === '/connect' ? 'p1' : 'p1';
 
+    const { active } = useContext(ApplicationContext);
+    const activeMenuTextColorHome = location.pathname === '/' ? 'cream' : 'p1';
+    const activeMenuTextColorServices = location.pathname === '/services' ? 'cream' : 'p1';
 
     const audioRef = useRef(null);
     const [isMuted, setIsMuted] = useState(false);
@@ -28,11 +32,18 @@ export default function AudioPlayer(props) {
     return (
         <div className='page-width audio-wrap'>
             <audio ref={audioRef} src={music} controls autoPlay loop/>
-            <button onClick={togglePlaying} 
-                className={`btn-mute ${homeTextColor} ${aboutTextColor} ${servicesTextColor} ${connectTextColor}`}
-            >{isPlaying ? "Pause" : "Play"}
-            <div className={location.pathname === '/about' ? 'border-bottom bronze' : 'border-bottom'}></div>
-            </button>
+            {active ?   <button onClick={togglePlaying} 
+                            className={`btn-mute ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}
+                        >
+                            {isPlaying ? "Pause" : "Play"}
+                            <div className={`border-bottom ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}></div>
+                        </button>
+                    :   <button onClick={togglePlaying} 
+                            className={`btn-mute ${homeTextColor} ${aboutTextColor} ${servicesTextColor} ${connectTextColor}`}
+                        >
+                            {isPlaying ? "Pause" : "Play"}
+                            <div className={location.pathname === '/about' ? 'border-bottom bronze' : 'border-bottom'}></div>
+                        </button>}
             
         </div>
     );

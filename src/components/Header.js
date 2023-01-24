@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ApplicationContext } from '../context';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo-notext.png';
 import '../styles/Header.scss';
 import { motion } from 'framer-motion';
 
 export default function Header(props) {
-    const [active, setActive] = useState(false);
+    const { active, setActive } = useContext(ApplicationContext);
     const location = useLocation();
 
     const showMenu = active ? 'show' : 'close';
