@@ -23,11 +23,13 @@ export default function Home(props) {
                         <div className='flex column-reverse'>
                             <h1>Cosmic Breathing</h1>
                             <h2>
+                                <span className='space'> • </span>
                                 <span>Vedantic Breathwork</span>
                                 <span className='space'> • </span>
                                 <span>Meditation</span>
                                 <span className='space'> • </span>
                                 <span>Yoga in the Himalayan Tradition</span>
+                                <span className='space'> • </span>
                             </h2>
                         </div>
                         <h2 className='text-center'>Integrated Approach to Personal Expansion</h2>
