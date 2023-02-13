@@ -22,7 +22,7 @@ export default function Home(props) {
                     <div className='small-width'>
                         <div className='flex column-reverse'>
                             <h1>Cosmic Breathing</h1>
-                            <h2>
+                            <h2 className='sub_title'>
                                 <span className='space'> • </span>
                                 <span>Vedantic Breathwork</span>
                                 <span className='space'> • </span>
