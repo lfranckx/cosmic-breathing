@@ -35,7 +35,7 @@ export default function AudioPlayer(props) {
 
     return (
         <div className='page-width audio-wrap'>
-            <audio id='music' ref={audioRef} src={music} controls autoPlay loop/>
+            <audio id='music' ref={audioRef} src={music} controls loop/>
             {active ?   <button onClick={togglePlaying} 
                             className={`btn-mute ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}
                         >
