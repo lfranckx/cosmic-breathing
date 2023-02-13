@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { ApplicationContext } from '../context';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../images/logo-notext.png';
+import logo from '../images/logo-new.png';
 import '../styles/Header.scss';
 import { motion } from 'framer-motion';
 
