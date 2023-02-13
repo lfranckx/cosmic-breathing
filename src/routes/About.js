@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import mountain from '../images/mountain_hex_1.png';
 import david from '../images/david_hex_1.png';
-import girl from '../images/girl_hex_1.png';
+import girl from '../images/grass_hex_1.png';
 import '../styles/About.scss';
 import { motion } from "framer-motion";
 
@@ -46,7 +46,7 @@ export default function About(props) {
                             </div>
 
                             <div className='image_wrap relative right'>
-                                <img className='right' src={girl} alt='Girl meditating at the park' />
+                                <img className='right' src={girl} alt='Field of grass' />
                             </div>
                         </motion.div>
 
