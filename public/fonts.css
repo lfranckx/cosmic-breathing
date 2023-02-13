@@ -7,3 +7,8 @@
     font-family: 'Montaga';
     src: url('./fonts/Montaga.ttf');
 }
+
+@font-face {
+    font-family: "Moonwild";
+    src: url('./fonts/Moonwild.otf');
+}
