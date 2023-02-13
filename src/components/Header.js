@@ -45,8 +45,8 @@ export default function Header(props) {
                     <div className='flex row'>
                         <Link to={'/'}>
                             <div className='logo_text_wrap'>
-                                {active ? <h1 className={`p1 top_layer ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}>Cosmic Breathing</h1> 
-                                        : <h1 className={`${homeTextColor} ${aboutTextColor} ${servicesTextColor} ${connectTextColor}`}>Cosmic Breathing</h1>}
+                                {/* {active ? <h1 className={`p1 top_layer ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}>Cosmic Breathing</h1> 
+                                        : <h1 className={`${homeTextColor} ${aboutTextColor} ${servicesTextColor} ${connectTextColor}`}>Cosmic Breathing</h1>} */}
                                 <div className='logo_wrap'>
                                     <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />
                                 </div>
