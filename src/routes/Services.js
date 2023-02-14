@@ -77,9 +77,9 @@ export default function Services(props) {
                                             <p>Utilizing a simple yet effective technique rooted in the Himalayan Vedantic Tradition, these teachings benefits all aspects of oneself and are accessible to practitioners of all experiences and newcomers like.</p>
                                             <p>Shared over a multi-session experience, we will discuss the foundations of meditation, practice the technique, and introduce a personalized mantra for your daily meditation practice.</p>
                                         </div>
-                                        <div className='image-wrap'>
+                                        {/* <div className='image-wrap'>
                                             <img src={david1} alt='David sitting in a meditation stance' />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className='btn-wrap'>
@@ -106,9 +106,9 @@ export default function Services(props) {
                                             <p>Every Sadhana is custom designed based on the intentions and goals of each individual and is practiced for a specific duration of time.</p>
                                             <p>Shared over a multi-session experience, you will receive guidance and support, while we set intentions, and practice Himalayan Integrated techniques.</p>
                                         </div>
-                                        <div className='image-wrap'>
+                                        {/* <div className='image-wrap'>
                                             <img src={david2} alt='David sitting in a meditation stance' />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className='btn-wrap'>
@@ -136,9 +136,9 @@ export default function Services(props) {
                                             <p>These practices are transformational and aid in establishing deep presence, relaxing the nervous system, reducing stress and anxiety of the mind and body, activating energy, overcoming limiting behaviors, and releasing ties to past trauma.</p>
                                             <p>Shared in a private one-on-one setting or in groups, a customized class structure is created and instructed to students to practice and experience these ancient practices for opening the heart and mind.</p>
                                         </div>
-                                        <div className='image-wrap'>
+                                        {/* <div className='image-wrap'>
                                             <img src={david3} alt='David sitting in a meditation stance' />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className='btn-wrap'>
