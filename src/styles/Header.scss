@@ -55,6 +55,10 @@
     .text_wrap {
         .menu_text {
             color: $black;
+
+            @media only screen and (max-width: 750px) {
+                font-size: 1rem;
+            }
         }
 
         .menu_text.cream {
