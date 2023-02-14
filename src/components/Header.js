@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { ApplicationContext } from '../context';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo-new.png';
+import logoCream from '../images/logo-cream.png';
 import '../styles/Header.scss';
 import { motion } from 'framer-motion';
 
@@ -23,6 +24,10 @@ export default function Header(props) {
 
     const activeMenuTextColorHome = location.pathname === '/' ? 'cream' : 'p1';
     const activeMenuTextColorServices = location.pathname === '/services' ? 'cream' : 'p1';
+
+    const activeMenuLogoColorHome = location.pathname === '/' ? logoCream : logo;
+    const activeMenuLogoColorServices = location.pathname === '/services' ? logoCream : logo;
+    const activeMenuLogoColorAbout = location.pathname === '/about' ? logoCream : logo;
 
     const homeLinkColor = location.pathname === '/' ? 'bronze' : '';
     const aboutLinkColor = location.pathname === '/about' ? 'black' : '';
@@ -48,7 +53,10 @@ export default function Header(props) {
                                 {/* {active ? <h1 className={`p1 top_layer ${activeMenuTextColorHome} ${activeMenuTextColorServices}`}>Cosmic Breathing</h1> 
                                         : <h1 className={`${homeTextColor} ${aboutTextColor} ${servicesTextColor} ${connectTextColor}`}>Cosmic Breathing</h1>} */}
                                 <div className='logo_wrap'>
-                                    <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />
+                                    { location.pathname === '/about' ? active ? <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' /> : <img src={logoCream} alt='Main logo for Cosmic Breathing' className='logo' /> 
+                                    : location.pathname === '/services' 
+                                    ? active ? <img src={activeMenuLogoColorServices} alt='Main logo for Cosmic Breathing' className='logo' /> : <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />  
+                                    : active ? <img src={activeMenuLogoColorHome} alt='Main logo for Cosmic Breathing' className='logo' /> : <img src={logo} alt='Main logo for Cosmic Breathing' className='logo' />}
                                 </div>
                             </div>
                         </Link>
